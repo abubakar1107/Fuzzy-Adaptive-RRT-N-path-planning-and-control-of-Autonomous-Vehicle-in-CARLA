@@ -29,16 +29,16 @@ To execute the path planning algorithms, follow these steps:
 - **FA-RRT*N Algorithm**:  
   Run the Python script `FA-RRT_star_N.py` in your preferred code editor.
   
-\```bash
+```bash
   python FA-RRT_star_N.py
-\```
+```
 
 - **RRT* Algorithm**:  
   Run the Python script `RRT_star.py` in your preferred code editor.
   
-\```bash
+```bash
   python RRT_star.py
-\```
+```
 
 ---
 
@@ -59,9 +59,9 @@ To visualize the simulation in the CARLA simulator:
    `<path_to_carla_installation>\CARLA_Latest\WindowsNoEditor\`
 3. Open PowerShell as an administrator and execute the following script:
    
-\```bash
+```bash
    python FA-RRT_star_N_CARLA.py
-\```
+```
 
 4. Ensure the CARLA server is fully initialized before running the script (this may take a few moments).
 
