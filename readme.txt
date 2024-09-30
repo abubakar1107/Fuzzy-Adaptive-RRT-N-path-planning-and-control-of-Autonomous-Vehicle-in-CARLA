@@ -1,70 +1,24 @@
-# FA-RRT\*N Path Planning and Control for Autonomous Vehicles
+Got it! If you want to upload the actual project files (not zipped), while avoiding setting up Git locally for each project, here's a simpler method using GitHub's web interface directly without the need to zip:
 
-This project presents an implementation and evaluation of the Fuzzy Adaptive RRT*N path planning algorithm
-for autonomous vehicles in the CARLA simulator. The report is
-based on the Intelligent Adaptive RRT* algorithm proposed in
-the paper ”Intelligent Adaptive RRT* Path Planning Algorithm
-for Mobile Robots” by Omar et al. We replicated the FARRT*N algorithm and implemented it with autonomous vehicles
-navigating environments (Towns) in CARLA. The main goal
-of the Fuzzy Adaptive RRT*N is to improve the efficiency of
-path generation in terms of both computation time and path
-quality. It achieves this by incorporating fuzzy logic to adapt
-the RRT* algorithm parameters dynamically based on the local
-environment characteristics. Specifically, it adjusts the step size
-and goal biasing parameters using fuzzy rules that consider obstacle density and distance to the goal. In our implementation, we
-developed the algorithm from scratch in Python and integrated
-it with the CARLA client to control the autonomous vehicle.
-We evaluated its performance by conducting multiple runs with
-the same conditions and compared the results of RRT* and FARRT*N. Results show that the FA-RRT*N approach generates
-high-quality, collision-free paths while reducing computation
-times compared to the original RRT* algorithm
+### Step-by-Step Guide to Upload Projects without Zipping:
 
----
+#### 1. **Create a Repository for Each Project on GitHub**
+   - Go to [GitHub.com](https://github.com) and log in.
+   - In the top-right corner, click the **+** icon and choose **New repository**.
+   - Name the repository according to the project and add a short description if you'd like.
+   - Choose **Public** so others can see it (if you want to showcase your work), and click **Create repository**.
 
-### Running the Algorithms
+#### 2. **Upload Project Files Directly to GitHub**
+   - After creating the repository, you’ll be taken to an empty repository page.
+   - Click the **Add file** button, then select **Upload files**.
+   - Drag and drop your **entire project folder** (not zipped) or navigate to it via the file explorer.
+   - GitHub will upload all the files and folders within that project.
+   - After the upload completes, scroll down and click **Commit changes** to save everything.
 
-To execute the path planning algorithms, follow these steps:
+#### 3. **Repeat for Each Project**
+   - Repeat this process for each project, creating a new repository for each one and uploading the project files directly through GitHub's interface.
 
-- **FA-RRT\*N Algorithm**:  
-  Run the Python script `FA-RRT_star_N.py` in your preferred code editor.
-  ```bash
-  python FA-RRT_star_N.py
-  ```
-
-- **RRT\* Algorithm**:  
-  Run the Python script `RRT_star.py` in your preferred code editor.
-  ```bash
-  python RRT_star.py
-  ```
+### Optional: Add a README for Each Project
+For a better presentation, you can create a `README.md` file for each repository. This can be done either while uploading your files or after. The README file should contain a brief description of your project, technologies used, and any other relevant information.
 
 ---
-
-### System Requirements for Simulation
-
-- **Minimum RAM**: 8 GB  
-- **Graphics Card**: 4 GB  
-- **Storage**: At least 60 GB
-
----
-
-### Visualizing the Simulation
-
-To visualize the simulation in the CARLA simulator:
-
-1. Install the CARLA simulator on your device.
-2. Locate and run the `CarlaUE4.exe` file, typically found at:  
-   `<path_to_carla_installation>\CARLA_Latest\WindowsNoEditor\`
-3. Open PowerShell as an administrator and execute the following script:
-   ```bash
-   python FA-RRT_star_N_CARLA.py
-   ```
-4. Ensure the CARLA server is fully initialized before running the script (this may take a few moments).
-
-This will launch a Pygame window where you can visualize the simulation within the CARLA environment.
-
----
-
-### Simulation Video
-
-Watch the simulation in action here:  
-[Simulation Video](https://youtu.be/uBteTbpqdzo)
