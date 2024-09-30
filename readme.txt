@@ -1,3 +1,6 @@
+Here's the markdown code for your README:
+
+```markdown
 # FA-RRT\*N Path Planning and Control for Autonomous Vehicles
 
 This project presents the implementation and evaluation of the Fuzzy Adaptive RRT\*N (FA-RRT\*N) path planning algorithm for autonomous vehicles within the CARLA simulator. Based on the "Intelligent Adaptive RRT* Path Planning Algorithm for Mobile Robots" by Omar et al., the FA-RRT\*N algorithm enhances the original RRT\* by using fuzzy logic to dynamically adjust parameters like step size and goal bias based on environmental factors such as obstacle density and distance to the goal. The primary objective of FA-RRT\*N is to optimize path generation in terms of computation time and path quality, offering high-quality, collision-free paths for autonomous vehicle navigation. The algorithm was developed from scratch in Python and integrated with CARLA to simulate autonomous vehicle behavior in different environments. Performance evaluations show that FA-RRT\*N outperforms traditional RRT\* by generating faster, more efficient paths.
@@ -51,3 +54,6 @@ Once ready, a Pygame window will launch, allowing you to view the simulation wit
 
 Watch the FA-RRT\*N simulation in action:  
 [Simulation Video](https://youtu.be/uBteTbpqdzo)
+```
+
+This code should work perfectly as a markdown file for your project’s README.
