@@ -1,30 +1,70 @@
-Team Members - GROUP 22
+# FA-RRT\*N Path Planning and Control for Autonomous Vehicles
 
-- Abubakar Siddiq Palli | DirectoryID: absiddiq | UID: 120403422
-- Gayatri Davuluri | DirectoryID: gayatrid | UID: 120304866
-- Dhana Santhosh Reddy Jangama Reddy | DirectoryID: js5162 | UID: 120405570
+This project presents an implementation and evaluation of the Fuzzy Adaptive RRT*N path planning algorithm
+for autonomous vehicles in the CARLA simulator. The report is
+based on the Intelligent Adaptive RRT* algorithm proposed in
+the paper ”Intelligent Adaptive RRT* Path Planning Algorithm
+for Mobile Robots” by Omar et al. We replicated the FARRT*N algorithm and implemented it with autonomous vehicles
+navigating environments (Towns) in CARLA. The main goal
+of the Fuzzy Adaptive RRT*N is to improve the efficiency of
+path generation in terms of both computation time and path
+quality. It achieves this by incorporating fuzzy logic to adapt
+the RRT* algorithm parameters dynamically based on the local
+environment characteristics. Specifically, it adjusts the step size
+and goal biasing parameters using fuzzy rules that consider obstacle density and distance to the goal. In our implementation, we
+developed the algorithm from scratch in Python and integrated
+it with the CARLA client to control the autonomous vehicle.
+We evaluated its performance by conducting multiple runs with
+the same conditions and compared the results of RRT* and FARRT*N. Results show that the FA-RRT*N approach generates
+high-quality, collision-free paths while reducing computation
+times compared to the original RRT* algorithm
 
+---
 
+### Running the Algorithms
 
-To run the FA-RRT*N algorithm, run the python file named "FA-RRT_star_N.py" in a code editor of your choice.
-    -python FA-RRT_star_N.py
+To execute the path planning algorithms, follow these steps:
 
-To run the RRT* algorithm, run the python file named "RRT_star.py" in a code editor of your choice.
-    -python RRT_star.py
+- **FA-RRT\*N Algorithm**:  
+  Run the Python script `FA-RRT_star_N.py` in your preferred code editor.
+  ```bash
+  python FA-RRT_star_N.py
+  ```
 
+- **RRT\* Algorithm**:  
+  Run the Python script `RRT_star.py` in your preferred code editor.
+  ```bash
+  python RRT_star.py
+  ```
 
-System details for simulation:
+---
 
-Min 8 gb ram and a 4 gb graphics card is required and a minimum storage of 60 gb is required 
+### System Requirements for Simulation
 
-To visualize the simulation:
+- **Minimum RAM**: 8 GB  
+- **Graphics Card**: 4 GB  
+- **Storage**: At least 60 GB
 
-1. Install CARLA simulator in your device.
-2. Go to the file "CarlaUE4.exe" and run it or start it. this is typically located at  "<path_to_carla_instalation>\CARLA_Latest\WindowsNoEditor\".
-3. Open powerpoint shell as administrator and run the script "FA-RRT_star_N_CARLA.py" | -python run FA-RRT_star_N_CARLA.py
-4. Make sure you wait before running the script untill the carla server is fully initialized. (This may take some time).
+---
 
-This will open a pygame window and the simulation can be visualized in the simulator
+### Visualizing the Simulation
 
+To visualize the simulation in the CARLA simulator:
 
-Link to the simulation video: https://youtu.be/uBteTbpqdzo
+1. Install the CARLA simulator on your device.
+2. Locate and run the `CarlaUE4.exe` file, typically found at:  
+   `<path_to_carla_installation>\CARLA_Latest\WindowsNoEditor\`
+3. Open PowerShell as an administrator and execute the following script:
+   ```bash
+   python FA-RRT_star_N_CARLA.py
+   ```
+4. Ensure the CARLA server is fully initialized before running the script (this may take a few moments).
+
+This will launch a Pygame window where you can visualize the simulation within the CARLA environment.
+
+---
+
+### Simulation Video
+
+Watch the simulation in action here:  
+[Simulation Video](https://youtu.be/uBteTbpqdzo)
