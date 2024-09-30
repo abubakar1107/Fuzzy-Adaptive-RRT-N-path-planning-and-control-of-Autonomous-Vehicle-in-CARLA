@@ -1,59 +1,73 @@
-Here's the markdown code for your README:
-
-```markdown
 # FA-RRT\*N Path Planning and Control for Autonomous Vehicles
 
-This project presents the implementation and evaluation of the Fuzzy Adaptive RRT\*N (FA-RRT\*N) path planning algorithm for autonomous vehicles within the CARLA simulator. Based on the "Intelligent Adaptive RRT* Path Planning Algorithm for Mobile Robots" by Omar et al., the FA-RRT\*N algorithm enhances the original RRT\* by using fuzzy logic to dynamically adjust parameters like step size and goal bias based on environmental factors such as obstacle density and distance to the goal. The primary objective of FA-RRT\*N is to optimize path generation in terms of computation time and path quality, offering high-quality, collision-free paths for autonomous vehicle navigation. The algorithm was developed from scratch in Python and integrated with CARLA to simulate autonomous vehicle behavior in different environments. Performance evaluations show that FA-RRT\*N outperforms traditional RRT\* by generating faster, more efficient paths.
+This project presents an implementation and evaluation of the Fuzzy Adaptive RRT*N path planning algorithm
+for autonomous vehicles in the CARLA simulator. The report is
+based on the Intelligent Adaptive RRT* algorithm proposed in
+the paper ”Intelligent Adaptive RRT* Path Planning Algorithm
+for Mobile Robots” by Omar et al. We replicated the FARRT*N algorithm and implemented it with autonomous vehicles
+navigating environments (Towns) in CARLA. The main goal
+of the Fuzzy Adaptive RRT*N is to improve the efficiency of
+path generation in terms of both computation time and path
+quality. It achieves this by incorporating fuzzy logic to adapt
+the RRT* algorithm parameters dynamically based on the local
+environment characteristics. Specifically, it adjusts the step size
+and goal biasing parameters using fuzzy rules that consider ob�stacle density and distance to the goal. In our implementation, we
+developed the algorithm from scratch in Python and integrated
+it with the CARLA client to control the autonomous vehicle.
+We evaluated its performance by conducting multiple runs with
+the same conditions and compared the results of RRT* and FA�RRT*N. Results show that the FA-RRT*N approach generates
+high-quality, collision-free paths while reducing computation
+times compared to the original RRT* algorithm
 
 ---
 
 ### Running the Algorithms
 
-To run the path planning algorithms:
+To execute the path planning algorithms, follow these steps:
 
 - **FA-RRT\*N Algorithm**:  
-  Execute the Python script `FA-RRT_star_N.py`:
-  ```bash
+  Run the Python script FA-RRT_star_N.py in your preferred code editor.
+  
+bash
   python FA-RRT_star_N.py
-  ```
+
 
 - **RRT\* Algorithm**:  
-  Execute the Python script `RRT_star.py`:
-  ```bash
+  Run the Python script RRT_star.py in your preferred code editor.
+  
+bash
   python RRT_star.py
-  ```
+
 
 ---
 
 ### System Requirements for Simulation
 
-- **RAM**: Minimum 8 GB  
-- **Graphics Card**: Minimum 4 GB  
+- **Minimum RAM**: 8 GB  
+- **Graphics Card**: 4 GB  
 - **Storage**: At least 60 GB
 
 ---
 
 ### Visualizing the Simulation
 
-To visualize the FA-RRT\*N simulation in CARLA:
+To visualize the simulation in the CARLA simulator:
 
-1. Install the CARLA simulator.
-2. Run the `CarlaUE4.exe` file, typically located in:  
-   `<path_to_carla_installation>\CARLA_Latest\WindowsNoEditor\`
-3. Open PowerShell as an administrator and run the FA-RRT\*N script:
-   ```bash
+1. Install the CARLA simulator on your device.
+2. Locate and run the CarlaUE4.exe file, typically found at:  
+   <path_to_carla_installation>\CARLA_Latest\WindowsNoEditor\
+3. Open PowerShell as an administrator and execute the following script:
+   
+bash
    python FA-RRT_star_N_CARLA.py
-   ```
-4. Wait for the CARLA server to fully initialize before executing the script.
 
-Once ready, a Pygame window will launch, allowing you to view the simulation within the CARLA environment.
+4. Ensure the CARLA server is fully initialized before running the script (this may take a few moments).
+
+This will launch a Pygame window where you can visualize the simulation within the CARLA environment.
 
 ---
 
 ### Simulation Video
 
-Watch the FA-RRT\*N simulation in action:  
+Watch the simulation in action here:  
 [Simulation Video](https://youtu.be/uBteTbpqdzo)
-```
-
-This code should work perfectly as a markdown file for your project’s README.
