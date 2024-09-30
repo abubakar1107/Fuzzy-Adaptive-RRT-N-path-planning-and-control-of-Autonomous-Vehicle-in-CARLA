@@ -1,24 +1,53 @@
-Got it! If you want to upload the actual project files (not zipped), while avoiding setting up Git locally for each project, here's a simpler method using GitHub's web interface directly without the need to zip:
+# FA-RRT\*N Path Planning and Control for Autonomous Vehicles
 
-### Step-by-Step Guide to Upload Projects without Zipping:
-
-#### 1. **Create a Repository for Each Project on GitHub**
-   - Go to [GitHub.com](https://github.com) and log in.
-   - In the top-right corner, click the **+** icon and choose **New repository**.
-   - Name the repository according to the project and add a short description if you'd like.
-   - Choose **Public** so others can see it (if you want to showcase your work), and click **Create repository**.
-
-#### 2. **Upload Project Files Directly to GitHub**
-   - After creating the repository, you’ll be taken to an empty repository page.
-   - Click the **Add file** button, then select **Upload files**.
-   - Drag and drop your **entire project folder** (not zipped) or navigate to it via the file explorer.
-   - GitHub will upload all the files and folders within that project.
-   - After the upload completes, scroll down and click **Commit changes** to save everything.
-
-#### 3. **Repeat for Each Project**
-   - Repeat this process for each project, creating a new repository for each one and uploading the project files directly through GitHub's interface.
-
-### Optional: Add a README for Each Project
-For a better presentation, you can create a `README.md` file for each repository. This can be done either while uploading your files or after. The README file should contain a brief description of your project, technologies used, and any other relevant information.
+This project presents the implementation and evaluation of the Fuzzy Adaptive RRT\*N (FA-RRT\*N) path planning algorithm for autonomous vehicles within the CARLA simulator. Based on the "Intelligent Adaptive RRT* Path Planning Algorithm for Mobile Robots" by Omar et al., the FA-RRT\*N algorithm enhances the original RRT\* by using fuzzy logic to dynamically adjust parameters like step size and goal bias based on environmental factors such as obstacle density and distance to the goal. The primary objective of FA-RRT\*N is to optimize path generation in terms of computation time and path quality, offering high-quality, collision-free paths for autonomous vehicle navigation. The algorithm was developed from scratch in Python and integrated with CARLA to simulate autonomous vehicle behavior in different environments. Performance evaluations show that FA-RRT\*N outperforms traditional RRT\* by generating faster, more efficient paths.
 
 ---
+
+### Running the Algorithms
+
+To run the path planning algorithms:
+
+- **FA-RRT\*N Algorithm**:  
+  Execute the Python script `FA-RRT_star_N.py`:
+  ```bash
+  python FA-RRT_star_N.py
+  ```
+
+- **RRT\* Algorithm**:  
+  Execute the Python script `RRT_star.py`:
+  ```bash
+  python RRT_star.py
+  ```
+
+---
+
+### System Requirements for Simulation
+
+- **RAM**: Minimum 8 GB  
+- **Graphics Card**: Minimum 4 GB  
+- **Storage**: At least 60 GB
+
+---
+
+### Visualizing the Simulation
+
+To visualize the FA-RRT\*N simulation in CARLA:
+
+1. Install the CARLA simulator.
+2. Run the `CarlaUE4.exe` file, typically located in:  
+   `<path_to_carla_installation>\CARLA_Latest\WindowsNoEditor\`
+3. Open PowerShell as an administrator and run the FA-RRT\*N script:
+   ```bash
+   python FA-RRT_star_N_CARLA.py
+   ```
+4. Wait for the CARLA server to fully initialize before executing the script.
+
+Once ready, a Pygame window will launch, allowing you to view the simulation within the CARLA environment.
+
+---
+
+### Simulation Video
+
+Watch the FA-RRT\*N simulation in action:  
+[Simulation Video](https://youtu.be/uBteTbpqdzo)
