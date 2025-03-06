@@ -69,7 +69,19 @@ This will launch a Pygame window where you can visualize the simulation within t
 
 ---
 
-### Simulation Video
+### **Simulation Video**
 
 Watch the simulation in action here:  
 [Simulation Video](https://youtu.be/uBteTbpqdzo)
+
+## **Other Visualizations**
+The image below illustrates a **path generated using FA-RRT*N**, avoiding obstacles while navigating towards the goal.
+![FA-RRT*N Path Planning](FARRT_STAR_N.png)
+
+The below images show the algorithm implemented in the carla simulator
+![Simulator snapshots](c2.png)
+![Simulator snapshots](thumbnail.png)
+
+The below is the graph that represents the advantages of the algorithm.
+84% reduction in computation time. 68% fewer nodes explored while generating shorter paths. Higher-quality paths with reduced detours compared to standard RRT*
+![Reduction in Time](Time.png)
